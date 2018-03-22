@@ -1,7 +1,7 @@
 <template>
-  <div class="tabs">
+  <div class="tab-div">
       <ul>
-          <li v-for="(item, index) in tab" :key="item.Id">{{index}}</li>
+          <li v-for="(item) in tabs" :key="item.Id">{{item.text}}</li>
       </ul>
   </div>
 </template>
@@ -14,9 +14,10 @@ export default {
         }
     },
     props: {
-        tab: {
+        tabs: {
             type: Array,
-            default: '1'
+            default: [],
+            required: true
         }
     },
     methods: {
@@ -24,4 +25,16 @@ export default {
     }
 }
 </script>
+ 
+ <style>
+ ul {
+     list-style: none;
+     width: 1000px;
+ }
+    .tab-div ul li {
+        float: left;
+        padding: 0 20px;
+    }
+ </style>
+ 
 

@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <nav-header></nav-header>
-    <tabs></tabs>
+    <tabs :tabs="tabsArr"></tabs>
     <nav-footer></nav-footer>
   </div>
 </template>
@@ -14,7 +14,28 @@ import Tabs from '@/components/common/tabs'
 export default {
   data() {
       return {
-
+        tabsArr: [
+          {
+            Id: '1',
+            text: '首页'
+          },
+          {
+            Id: '2',
+            text: '粮食'
+          },
+          {
+            Id: '3',
+            text: '罐头超市'
+          },
+          {
+            Id: '4',
+            text: '猫砂'
+          },
+          {
+            Id: '5',
+            text: '医疗保健'
+          }
+        ]
       }
   },
   components: {
