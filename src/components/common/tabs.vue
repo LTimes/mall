@@ -1,7 +1,7 @@
 <template>
   <div class="tabs">
       <ul>
-          <li v-for="(item, index) in tab" :key="item.Id">{{index}}</li>
+          <li v-for="(item) in tabs" :key="item.tabId" v-bind:class="{'active':item.active}">{{item.Text}}</li>
       </ul>
   </div>
 </template>
@@ -14,9 +14,10 @@ export default {
         }
     },
     props: {
-        tab: {
+        tabs: {
             type: Array,
-            default: '1'
+            default: [],
+            required: true
         }
     },
     methods: {
@@ -25,3 +26,13 @@ export default {
 }
 </script>
 
+<style scoped>
+ .tabs ul li {
+     float: left;
+     list-style: none;
+     padding: 4px 10px;
+ }
+ .active {
+     border-bottom: 2px solid #f12;
+ }
+</style>
