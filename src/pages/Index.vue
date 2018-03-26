@@ -1,12 +1,8 @@
 <template>
   <div class="index">
     <nav-header></nav-header>
-<<<<<<< HEAD
-    <tabs :tabs="tabsArr"></tabs>
-=======
     <tabs :tabs='tabs'></tabs>
     <banners :banners="banner"></banners>
->>>>>>> 50b58bdd3359793d0e3a4c1a5fab5d6c8eed9784
     <nav-footer></nav-footer>
   </div>
 </template>
@@ -20,41 +16,19 @@ import Banners from '@/components/common/banners'
 export default {
   data() {
       return {
-<<<<<<< HEAD
-        tabsArr: [
-          {
-            Id: '1',
-            text: '首页'
-          },
-          {
-            Id: '2',
-            text: '粮食'
-          },
-          {
-            Id: '3',
-            text: '罐头超市'
-          },
-          {
-            Id: '4',
-            text: '猫砂'
-          },
-          {
-            Id: '5',
-            text: '医疗保健'
-=======
         tabs: [
           {
-            tabId: 0,
+            tabId: 10,
             Text: '首页',
             active: true
           },
           {
-            tabId: 1,
+            tabId: 11,
             Text: '主粮',
             active: false
           },
           {
-            tabId: 2,
+            tabId: 12,
             Text: '超市',
             active: false
           }
@@ -84,7 +58,6 @@ export default {
             bannerId: 4,
             Text: '超市',
             ImgUrl: 'https://img2.epetbar.com/nowater/2018-03/23/22/1a15c21f751372982c5628a211dd570c.jpg@!water'
->>>>>>> 50b58bdd3359793d0e3a4c1a5fab5d6c8eed9784
           }
         ]
       }

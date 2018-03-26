@@ -22,6 +22,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.navheader {
+  padding: 4px 8px;
+}
 h1, h2 {
   font-weight: normal;
 }
@@ -35,7 +38,7 @@ ul {
 }
 .search {
   background: #eee;
-  border: 0;
+  border: 1px solid #eee;
   padding: 10px;
   border-radius: 4px;
   width: 16rem;

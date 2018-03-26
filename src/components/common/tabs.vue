@@ -1,11 +1,7 @@
 <template>
   <div class="tab-div">
       <ul>
-<<<<<<< HEAD
-          <li v-for="(item) in tabs" :key="item.Id">{{item.text}}</li>
-=======
           <li v-for="(item) in tabs" :key="item.tabId" v-bind:class="{'active':item.active}">{{item.Text}}</li>
->>>>>>> 50b58bdd3359793d0e3a4c1a5fab5d6c8eed9784
       </ul>
   </div>
 </template>
