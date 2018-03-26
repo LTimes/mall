@@ -2,13 +2,13 @@
   <div class="banner">
       <div class="banner">
           <ul>
-              <li v-for="(item,index) in banners" :key="item.bannerId">
+              <li>
                   <a href="javascript:;">
                     <transition name="slide-fade">
-                      <img :src="item.ImgUrl" :alt="index+item.Text">
+                      <img :src="banners[nowIndex].ImgUrl" v-if="isShow" :alt="banners[nowIndex].Text">
                     </transition>
-                    <transition>
-                      <img :src="item.ImgUrl" :alt="index+item.Text">
+                    <transition name="slide-fade-old">
+                      <img :src="banners[nowIndex].ImgUrl" v-if="!isShow" :alt="banners[nowIndex].Text">
                     </transition>  
                   </a>
               </li>
@@ -26,7 +26,8 @@
 export default {
   data() {
       return {
-        newIndex: ''  
+        nowIndex: 0,
+        isShow: true 
       }
   },
   props: {
@@ -78,8 +79,12 @@ export default {
     .slide-fade-enter-active {
     transition: all .3s ease;
     }
-    .slide-fade-leave-active {
+    .slide-fade-enter {
+        transform: translateX(300px)
+    }
+    .slide-fade-old-leave-active {
     transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transform: translateX(-300px)
     }
     .slide-fade-enter, .slide-fade-leave-to
     /* .slide-fade-leave-active for below version 2.1.8 */ {
