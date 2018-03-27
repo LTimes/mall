@@ -1,6 +1,6 @@
 <template>
   <div class="tab-div">
-      <ul>
+      <ul class="tab_list">
           <li v-for="(item) in tabs" :key="item.tabId" v-bind:class="{'active':item.active}">{{item.Text}}</li>
       </ul>
   </div>
@@ -27,13 +27,13 @@ export default {
 </script>
  
  <style>
- ul {
+ ul.tab_list {
      list-style: none;
      width: 1000px;
  }
     .tab-div ul li {
         float: left;
-        padding: 0 20px;
+        padding: 8px 20px;
     }
  </style>
  

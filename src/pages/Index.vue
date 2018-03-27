@@ -1,7 +1,9 @@
 <template>
   <div class="index">
-    <nav-header></nav-header>
-    <tabs :tabs='tabs'></tabs>
+    <div class="mains">
+      <nav-header></nav-header>
+      <tabs :tabs='tabs'></tabs>
+    </div>
     <banners :banners="banner"></banners>
     <nav-footer></nav-footer>
   </div>
@@ -70,4 +72,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .mains {
+    height: 86px;
+  }
+</style>
 

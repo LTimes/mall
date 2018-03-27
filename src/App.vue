@@ -5,12 +5,17 @@
 </template>
 
 <script>
+  
 export default {
   name: 'App'
 }
 </script>
 
 <style>
+body {
+    line-height: 1.6;
+    font-family: 'Microsoft Yahei',-apple-system-font,Helvetica Neue,sans-serif;
+}
 #app {
   font-family: 'Droidsansfallback','Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
