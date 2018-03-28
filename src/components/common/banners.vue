@@ -32,13 +32,12 @@
       return {
         nowIndex: 0,
         isShow: true
-      };
+      }
     },
     props: {
       banners: {
         type: Array,
-        default: [],
-        required: true
+        default: []
       },
       inv: {
         type: Number,
@@ -54,7 +53,7 @@
         }
       },
       nextIndex() {
-        if (this.nowIndex === this.banners.length) {
+        if (this.nowIndex === this.banners.length - 1) {
           return 0;
         } else {
           return this.nowIndex + 1;

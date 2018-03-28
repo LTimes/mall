@@ -1,0 +1,56 @@
+.mains {
+    height: 86px;
+}
+
+.float_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 2px 2px 2px #e8e8e8;
+}
+
+.menu_ul li {
+    width: 20%;
+    float: left;
+}
+
+.menu_ul li img {
+    width: 100%;
+}
+
+
+/* 每日疯抢 */
+
+.suprise_day {
+    width: 100%;
+    height: 1000px;
+}
+
+.suprise_day_title {
+    float: left;
+    padding: 4px 10px;
+    position: relative;
+    width: 92%;
+    margin: 0 auto;
+}
+
+.suprise_day_title .title img {
+    width: 85px;
+}
+
+.suprise_day_title .title {
+    float: left;
+}
+
+.suprise_day_title .last_time {
+    float: right;
+    padding-right: 50px;
+}
+
+.suprise_day_title .more {
+    position: absolute;
+    top: 4px;
+    right: 16px;
+}

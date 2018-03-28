@@ -4,12 +4,50 @@
       <nav-header></nav-header>
       <tabs :tabs='tabs'></tabs>
     </div>
+    
     <banners :banners="banner"></banners>
+    <!-- 菜单 -->
+    <div class="menu">
+      <div>
+        <ul class="menu_ul clearfloat">
+          <li v-for="item in 10" :key="item">
+            <a href="javascript:;"><img src="https://img1.epetbar.com/2018-02/02/14/de04450899226ab8d4f96b3f5a42d370.jpg@!water" alt=""></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 新人广告 -->
+    <div class="banner-advance">
+      <div class="advance-img">
+        <a href="javascript:;"><img src="https://img2.epetbar.com/nowater/2017-12/18/10/5a3f9a270c73b55bd2525b0578e47782.gif" style="height: 120px;"></a>
+      </div>
+    </div>
+    <!-- 每日疯抢 -->
+    <div class="suprise_day">
+      <div class="suprise_day_title clearfloat">
+        <div class="title">
+          <img src="https://static.epetbar.com/static_wap/appmall/main/new_index_icon_suprice.png?version=03">
+        </div>
+        <div class="last_time">
+          <span>下一场开始</span>
+          <span>20</span>
+          <span> : </span>
+          <span>00</span>
+        </div>
+        <div class="more">
+          <span>更多</span>
+          <i class="icon iconfont icon-gengduo"></i>
+        </div>
+      </div>
+    </div>
+
+
     <nav-footer></nav-footer>
   </div>
 </template>
 
 <script>
+import '@/assets/css/index.css'
 import NavHeader from '@/components/header/NavHeader'
 import NavFooter from '@/components/footer/NavFooter'
 import Tabs from '@/components/common/tabs'
@@ -31,7 +69,17 @@ export default {
           },
           {
             tabId: 12,
-            Text: '超市',
+            Text: '罐头超市',
+            active: false
+          },
+          {
+            tabId: 13,
+            Text: '猫砂',
+            active: false
+          },
+          {
+            tabId: 14,
+            Text: '医疗保健',
             active: false
           }
         ],
@@ -74,8 +122,6 @@ export default {
 </script>
 
 <style scoped>
-  .mains {
-    height: 86px;
-  }
+  
 </style>
 

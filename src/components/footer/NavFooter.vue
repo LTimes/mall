@@ -1,9 +1,9 @@
 <template>
   <div class="footer">
       <ul>
-          <li v-for="(item) in tabs" :key="item.id" @click="foot">
-              <i class="iconfont icon_footer" :class="item.icon"></i>
-              <a href="javascript:;">{{item.name}}</a>
+          <li v-for="(item,index) in tabs" :key="item.id" @click="footShow(index)">
+              <i class="iconfont icon_footer" v-bind:class="[item.icon,item.active? 'on': '']" ></i>
+              <a href="javascript:;" :class="{'on': item.active}">{{item.name}}</a>
           </li>
       </ul>
   </div>
@@ -42,6 +42,14 @@ export default {
                }
            ] 
         }
+    },
+    methods: {
+        footShow(index) {
+           this.tabs.forEach((item) => {
+               item.active = false;
+           }) 
+           this.tabs[index].active = true;
+        }
     }
 }
 </script>
@@ -52,7 +60,7 @@ export default {
     }
     .footer {
         width: 100%;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         left: 0;
         box-shadow: 4px 0 4px #eee;
@@ -82,7 +90,7 @@ export default {
     color: #666;
     }
     .on {
-        color: #f19;
+        color: #f19 !important;
     }
 
 </style>

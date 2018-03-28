@@ -44,11 +44,11 @@ ul {
   border: 1px solid #eee;
   padding: 6px;
   border-radius: 4px;
-  width: 73%;
+  width: 72%;
   margin: 0 auto;
 }
 .search:focus {
-  border:1px solid #e74086;
+  border:1px solid #eee;
   border-radius: 4px;
   outline: 0;
 }
