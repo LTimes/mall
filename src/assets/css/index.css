@@ -1,5 +1,6 @@
 .mains {
-    height: 86px;
+    height: 104px;
+
 }
 
 .float_header {
@@ -8,9 +9,12 @@
     left: 0;
     width: 100%;
     z-index: 10;
+    background: #fff;
     box-shadow: 2px 2px 2px #e8e8e8;
 }
-
+.menu {
+        padding: 8px 0 0 0;
+}
 .menu_ul li {
     width: 20%;
     float: left;
@@ -25,7 +29,7 @@
 
 .suprise_day {
     width: 100%;
-    height: 1000px;
+    padding: 8px 0;
 }
 
 .suprise_day_title {
@@ -53,4 +57,27 @@
     position: absolute;
     top: 4px;
     right: 16px;
+}
+.suprise_day_content {
+    position: relative;
+}
+.suprise_day_content .content_box {
+    float: left;
+    width: 93px;
+    text-align: center;
+}
+.suprise_day_content .content_box a {
+    display: block;
+}
+.suprise_day_content .content_box .image {
+    width: 100%;
+}
+.suprise_day_content .content_box .now_price {
+    margin: 2px 0;
+    color: #c01f1f;
+    font-size: 16px;
+}
+.suprise_day_content .content_box .old_price {
+    color: #999;
+    text-decoration: line-through;
 }

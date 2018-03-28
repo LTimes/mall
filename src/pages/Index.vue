@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <div class="mains">
+    <div class="mains" :class="{'float_header': headerFlag}">
       <nav-header></nav-header>
       <tabs :tabs='tabs'></tabs>
     </div>
@@ -38,6 +38,24 @@
           <span>更多</span>
           <i class="icon iconfont icon-gengduo"></i>
         </div>
+      </div>
+      <div class="suprise_day_content clearfloat">
+        <div class="content_box" v-for="item in supriseData" :key="item"> 
+          <a href="javascript:;">
+            <img class="image" src="https://img1.epetbar.com/2015-08/11/10/8d8657a00596c6d179f728fe4736f918.jpg?x-oss-process=style/fill&amp;$1=300&amp;$2=300">
+            <span class="now_price">￥12.24</span>
+            <span class="old_price">￥42.00</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品预告 -->
+    <div class="product_notice">
+      <div class="content">
+        <a href="">
+          <img src="https://img2.epetbar.com/nowater/2018-03/27/18/044f881e282d924884d25bb8817e0c09.jpg@!water" style="height: 160px;">
+        </a>
       </div>
     </div>
 
@@ -109,7 +127,9 @@ export default {
             Text: '超市',
             ImgUrl: 'https://img2.epetbar.com/nowater/2018-03/23/22/1a15c21f751372982c5628a211dd570c.jpg@!water'
           }
-        ]
+        ],
+        supriseData: 4,
+        headerFlag: false, // 判断是否吸顶
       }
   },
   components: {
@@ -117,6 +137,23 @@ export default {
       NavFooter,
       Banners,
       Tabs
+  },
+  methods: {
+    init() {
+      var _this = this;
+      document.onscroll = function () {
+        var scrolls = document.documentElement.scrollTop;
+        if (scrolls > 60) {
+        _this.headerFlag = true;
+      } else {
+        _this.headerFlag = false;
+      }
+      }
+      
+    }
+  },
+  mounted() {
+    this.init();
   }
 }
 </script>
