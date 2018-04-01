@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-div">
+  <div class="tab-div" ref="wrapper">
       <ul class="tab_list">
           <li v-for="(item, index) in tabs" :key="item.tabId" v-bind:class="{'active':item.active}" @click="tabsShow(index)">
           <a href="javascript:;"><span>{{item.Text}}</span></a>
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import BScroll from 'better-scroll'
+
 export default {
     data() {
         return {
@@ -29,17 +31,26 @@ export default {
             })
             this.tabs[index].active = true;
         }
+    },
+    created() {
+        this.$nextTick(() => {
+            this.scroll = new BScroll(this.$refs.wrapper, {scrollX: true,click: true})
+        })
     }
 }
 </script>
 
 <style scoped>
+.tab-div {
+    width: 375px;
+    overflow: scroll;
+}
 #app a:hover {
     text-decoration: none !important;
 }
 ul.tab_list {
      list-style: none;
-     width: 150%;
+     width: 520px;
  }
  ul.tab_list li {
      float: left;

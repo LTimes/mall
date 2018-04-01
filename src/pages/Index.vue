@@ -99,6 +99,16 @@ export default {
             tabId: 14,
             Text: '医疗保健',
             active: false
+          },
+          {
+            tabId: 15,
+            Text: '美容香波',
+            active: false
+          },
+          {
+            tabId: 16,
+            Text: '零食玩具',
+            active: false
           }
         ],
         banner: [
