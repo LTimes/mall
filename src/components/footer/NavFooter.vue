@@ -1,9 +1,25 @@
 <template>
   <div class="footer">
-      <ul>
-          <li v-for="(item,index) in tabs" :key="item.id" @click="footShow(index)">
-              <i class="iconfont icon_footer" v-bind:class="[item.icon,item.active? 'on': '']" ></i>
-              <a href="javascript:void(0);" :class="{'on': item.active}">{{item.name}}</a>
+      <ul id="tabUl">
+          <li class="on" @click="goAdress('/')">
+              <i class="iconfont icon_footer icon-shouye"></i>
+              <span>首页</span>
+          </li>
+          <li @click="goAdress('/category')">
+              <i class="iconfont icon_footer icon-fenlei"></i>
+              <span>分类</span>
+          </li>
+          <li @click="goAdress('/theme')">
+              <i class="iconfont icon_footer icon-jushoucang"></i>
+              <span>盟主</span>
+          </li>
+          <li @click="goAdress('/cart')">
+              <i class="iconfont icon_footer icon-gouwuche"></i>
+              <span>购物车</span>
+          </li>
+          <li @click="goAdress('/home')">
+              <i class="iconfont icon_footer icon-wode"></i>
+              <span>我的</span>
           </li>
       </ul>
   </div>
@@ -14,42 +30,20 @@ import '@/assets/font/demo.css';
 export default {
     data() {
         return {
-           tabs: [
-               {
-                   name:" 首页",
-                   icon: 'icon-shouye',
-                   active: true
-               },
-               {
-                   name:" 分类",
-                   icon: 'icon-fenlei',
-                   active: false
-               },
-               {
-                   name:"盟主喵喵",
-                   icon: 'icon-jushoucang',
-                   active: false
-               },
-               {
-                   name:" 购物车",
-                   icon: 'icon-gouwuche',
-                   active: false
-               },
-               {
-                   name:" 我的",
-                   icon: 'icon-wode',
-                   active: false
-               }
-           ] 
+          
         }
     },
     methods: {
-        footShow(index) {
-           this.tabs.forEach((item) => {
-               item.active = false;
-           }) 
-           this.tabs[index].active = true;
+        footShow() {
+           
+          
+        },
+        goAdress(path) {
+            this.$router.push(path);
         }
+    },
+    mounted() {
+        this.footShow();
     }
 }
 </script>
@@ -81,13 +75,13 @@ export default {
     .footer li a {
         display: block;
         text-align: center;
-        color: #666;
+        /* color: #666; */
     }
     .icon_footer {
         font-size: 20px;
     display: block;
     text-align: center;
-    color: #666;
+    /* color: #666; */
     }
     .on {
         color: #f19 !important;

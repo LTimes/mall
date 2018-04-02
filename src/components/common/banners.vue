@@ -12,15 +12,15 @@
     </div>
     <div class="page">
       <ul>
-        <li>
+        <!-- <li>
           <span @click="goto(prevIndex)">&lt;</span>
-        </li>
+        </li> -->
         <li v-for="(item,index) in banners.length" :key="index">
-          <a @click="goto(index)" :class="{on: index === nowIndex}" href="javascript:;">{{index}}</a>
+          <a @click="goto(index)" :class="{'on': index === nowIndex}" href="javascript:;"></a>
         </li>
-        <li>
+        <!-- <li>
           <span @click="goto(nextIndex)">&gt;</span>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -107,18 +107,31 @@
     position: absolute;
     top: 0;
   }
-
+  .page {
+    position: absolute;
+    top: 7rem;
+    left: 5.6rem;
+  }
   .page ul li {
     float: left;
     list-style: none;
     text-align: center;
     line-height: 24px;
     background: #ddd;
-    width: 24px;
-    height: 24px;
+    width: 10px;
+    margin: 0 5px;
+    height: 10px;
     border-radius: 50%;
   }
-
+  .page ul li a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .on {
+    background:#f19;
+  }
   /* 可以设置不同的进入和离开动画 */
 
   /* 设置持续时间和动画函数 */

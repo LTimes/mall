@@ -153,7 +153,7 @@ export default {
       var _this = this;
       document.onscroll = function () {
         var scrolls = document.documentElement.scrollTop;
-        if (scrolls > 60) {
+        if (scrolls > 1) {
         _this.headerFlag = true;
       } else {
         _this.headerFlag = false;
