@@ -43,6 +43,15 @@ import getData from '@/service/getData'
                 })
                 this.tabs[index].active = true;
             },
+            getDataList() {
+                axios.post('./src/service/getData.js').then((response) => {
+                    let res = response.data;
+                    console.log(res)
+                })
+            }
+        },
+        mounted() {
+            this.getDataList();
         }
     }
 </script>
