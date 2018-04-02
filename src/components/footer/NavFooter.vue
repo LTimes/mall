@@ -3,7 +3,7 @@
       <ul>
           <li v-for="(item,index) in tabs" :key="item.id" @click="footShow(index)">
               <i class="iconfont icon_footer" v-bind:class="[item.icon,item.active? 'on': '']" ></i>
-              <a href="javascript:;" :class="{'on': item.active}">{{item.name}}</a>
+              <a href="javascript:void(0);" :class="{'on': item.active}">{{item.name}}</a>
           </li>
       </ul>
   </div>
