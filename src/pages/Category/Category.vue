@@ -26,7 +26,7 @@
         <div class="hot_brand">
             <h4>-- 推荐品牌 --</h4>
             <ul>
-                <li v-for="(item, index) in brandList" :key="item.Id">
+                <li v-for="(item) in brandList" :key="item.Id">
                     <div class="hot_brand-content">
                         <img :src="'../../../static'+item.Img" alt="">
                         <span>{{item.Name}}</span>
