@@ -1,0 +1,111 @@
+{
+    "categoryTab": [{
+            "Id": "c1",
+            "Text": "推荐",
+            "active": true
+        },
+        {
+            "Id": "c2",
+            "Text": "宠物国际",
+            "active": false
+        },
+        {
+            "Id": "c3",
+            "Text": "驱虫顺毛",
+            "active": false
+        },
+        {
+            "Id": "c4",
+            "Text": "外出清洁",
+            "active": false
+        },
+        {
+            "Id": "c5",
+            "Text": "猫咪零食",
+            "active": false
+        },
+        {
+            "Id": "c6",
+            "Text": "猫咪粮食",
+            "active": false
+        },
+        {
+            "Id": "c7",
+            "Text": "猫咪玩具",
+            "active": false
+        },
+        {
+            "Id": "c8",
+            "Text": "猫咪保健",
+            "active": false
+        },
+        {
+            "Id": "c9",
+            "Text": "猫咪牵引",
+            "active": false
+        },
+        {
+            "Id": "c10",
+            "Text": "猫咪服饰",
+            "active": false
+        },
+        {
+            "Id": "c11",
+            "Text": "猫咪医疗",
+            "active": false
+        },
+        {
+            "Id": "c12",
+            "Text": "猫咪美容",
+            "active": false
+        },
+        {
+            "Id": "c13",
+            "Text": "猫咪医生",
+            "active": false
+        },
+        {
+            "Id": "c14",
+            "Text": "猫咪爱好",
+            "active": false
+        }
+
+    ],
+    "brandList": [{
+            "Id": "b1",
+            "Img": "/img/brand1.jpg",
+            "Name": "原始猎食渴望",
+            "country": "加拿大"
+        },
+        {
+            "Id": "b2",
+            "Img": "/img/brand2.jpg",
+            "Name": "ZIWI",
+            "country": "新西兰"
+        },
+        {
+            "Id": "b3",
+            "Img": "/img/brand3.jpg",
+            "Name": "冠能",
+            "country": "美国"
+        },
+        {
+            "Id": "b4",
+            "Img": "/img/brand4.jpg",
+            "Name": "麦高臣Microysics",
+            "country": "美国"
+        },
+        {
+            "Id": "b5",
+            "Img": "/img/brand5.jpg",
+            "Name": "爱西亚",
+            "country": "日本"
+        },
+        {
+            "Id": "b6",
+            "Img": "/img/brand6.jpg",
+            "Name": "谷登GOLDEN",
+            "country": "中国"
+        }
+    ]
+}
