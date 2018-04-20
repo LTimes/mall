@@ -92,8 +92,8 @@
   .banner-box {
     position: relative;
     margin: 0 auto;
-    width: 375px;
-    height: 176px;
+    width: 18.75rem;
+    height: 8.5rem;
     overflow: hidden;
   }
 
@@ -109,8 +109,9 @@
   }
   .page {
     position: absolute;
-    top: 7rem;
-    left: 5.6rem;
+    top: 7.8rem;
+    left: 9.125rem;
+    margin-left: -2.5rem;
   }
   .page ul li {
     float: left;
@@ -118,15 +119,15 @@
     text-align: center;
     line-height: 24px;
     background: #ddd;
-    width: 10px;
-    margin: 0 5px;
-    height: 10px;
+    width: .5rem;
+    margin: 0 .25rem;
+    height: .5rem;
     border-radius: 50%;
   }
   .page ul li a {
     display: block;
-    width: 10px;
-    height: 10px;
+    width: .5rem;
+    height: .5rem;
     border-radius: 50%;
   }
   .on {
@@ -141,11 +142,13 @@
   }
 
   .slide-fade-enter {
-    transform: translateX(375px);
+    transition: all 0.5s;
+    
+    transform: translateX(18.75rem);
   }
 
   .slide-fade-old-leave-active {
     transition: all 0.5s;
-    transform: translateX(-375px);
+    transform: translateX(-18.75rem);
   }
 </style>

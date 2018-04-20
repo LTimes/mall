@@ -34,6 +34,9 @@ export default {
         }
     },
     methods: {
+        init() {
+            
+        },
         footShow() {
            
           
