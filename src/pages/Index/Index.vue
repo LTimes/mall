@@ -8,56 +8,18 @@
     <banners :banners="banner"></banners>
     <!-- 菜单 -->
     <div class="menu">
-      <div>
+      <div class="recomend">
         <ul class="menu_ul clearfloat">
           <li v-for="item in 10" :key="item">
-            <a href="javascript:;"><img src="https://img1.epetbar.com/2018-02/02/14/de04450899226ab8d4f96b3f5a42d370.jpg@!water" alt=""></a>
+            <a href="javascript:;"></a>
           </li>
         </ul>
       </div>
-    </div>
-    <!-- 新人广告 -->
-    <div class="banner-advance">
-      <div class="advance-img">
-        <a href="javascript:;"><img src="https://img2.epetbar.com/nowater/2017-12/18/10/5a3f9a270c73b55bd2525b0578e47782.gif" style="height: 120px;"></a>
+      <div class="list-box">
+        
       </div>
     </div>
-    <!-- 每日疯抢 -->
-    <div class="suprise_day">
-      <div class="suprise_day_title clearfloat">
-        <div class="title">
-          <img src="https://static.epetbar.com/static_wap/appmall/main/new_index_icon_suprice.png?version=03">
-        </div>
-        <div class="last_time">
-          <span>下一场开始</span>
-          <span>20</span>
-          <span> : </span>
-          <span>00</span>
-        </div>
-        <div class="more">
-          <span>更多</span>
-          <i class="icon iconfont icon-gengduo"></i>
-        </div>
-      </div>
-      <div class="suprise_day_content clearfloat">
-        <div class="content_box" v-for="item in supriseData" :key="item"> 
-          <a href="javascript:;">
-            <img class="image" src="https://img1.epetbar.com/2015-08/11/10/8d8657a00596c6d179f728fe4736f918.jpg?x-oss-process=style/fill&amp;$1=300&amp;$2=300">
-            <span class="now_price">￥12.24</span>
-            <span class="old_price">￥42.00</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 商品预告 -->
-    <div class="product_notice">
-      <div class="content">
-        <a href="">
-          <img src="https://img2.epetbar.com/nowater/2018-03/27/18/044f881e282d924884d25bb8817e0c09.jpg@!water" style="height: 160px;">
-        </a>
-      </div>
-    </div>
+    
 
 
     <nav-footer></nav-footer>

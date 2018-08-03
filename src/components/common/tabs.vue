@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
 .tab-div {
-    width: 375px;
+    /* width: 375px; */
     overflow: scroll;
 }
 #app a:hover {
