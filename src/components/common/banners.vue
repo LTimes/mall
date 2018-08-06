@@ -110,8 +110,11 @@
   .page {
     position: absolute;
     top: 7.8rem;
-    left: 9.125rem;
-    margin-left: -2.5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 2.5rem;
+    margin: 0 auto;
   }
   .page ul li {
     float: left;
@@ -119,15 +122,15 @@
     text-align: center;
     line-height: 24px;
     background: #ddd;
-    width: .5rem;
+    width: .3rem;
     margin: 0 .25rem;
-    height: .5rem;
+    height: .3rem;
     border-radius: 50%;
   }
   .page ul li a {
     display: block;
-    width: .5rem;
-    height: .5rem;
+    width: .3rem;
+    height: .3rem;
     border-radius: 50%;
   }
   .on {

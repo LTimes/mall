@@ -1,76 +1,176 @@
 {
-    "categoryTab": [{
+    "categoryTab": {
+        "tabLeft": [{
             "Id": "c1",
             "Text": "推荐",
             "active": true
-        },
-        {
+        }, {
             "Id": "c2",
             "Text": "宠物国际",
             "active": false
-        },
-        {
+        }, {
             "Id": "c3",
             "Text": "驱虫顺毛",
             "active": false
-        },
-        {
+        }, {
             "Id": "c4",
             "Text": "外出清洁",
             "active": false
-        },
-        {
+        }, {
             "Id": "c5",
             "Text": "猫咪零食",
             "active": false
-        },
-        {
+        }, {
             "Id": "c6",
             "Text": "猫咪粮食",
             "active": false
-        },
-        {
+        }, {
             "Id": "c7",
             "Text": "猫咪玩具",
             "active": false
-        },
-        {
+        }, {
             "Id": "c8",
             "Text": "猫咪保健",
             "active": false
-        },
-        {
+        }, {
             "Id": "c9",
             "Text": "猫咪牵引",
             "active": false
-        },
-        {
+        }, {
             "Id": "c10",
             "Text": "猫咪服饰",
             "active": false
-        },
-        {
+        }, {
             "Id": "c11",
             "Text": "猫咪医疗",
             "active": false
-        },
-        {
+        }, {
             "Id": "c12",
             "Text": "猫咪美容",
             "active": false
-        },
-        {
+        }, {
             "Id": "c13",
             "Text": "猫咪医生",
             "active": false
-        },
-        {
+        }, {
             "Id": "c14",
             "Text": "猫咪爱好",
             "active": false
-        }
-
-    ],
+        }],
+        "tabRight": [{
+                "title": "热门分类",
+                "content": [{
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    }
+                ]
+            },
+            {
+                "title": "猫咪主粮",
+                "content": [{
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    }
+                ]
+            },
+            {
+                "title": "猫咪主粮",
+                "content": [{
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    }
+                ]
+            },
+            {
+                "title": "猫咪主粮",
+                "content": [{
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    },
+                    {
+                        "img": "https://img2.epetbar.com/nowater/2018-01/25/19/4c26cffc418644a72a54f9d9bdedfa1b.jpg?x-oss-process=style/fill&$1=300&$2=300",
+                        "txt": "猫咪猫砂"
+                    }
+                ]
+            }
+        ]
+    },
     "brandList": [{
             "Id": "b1",
             "Img": "/img/brand1.jpg",

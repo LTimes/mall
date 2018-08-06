@@ -30,9 +30,13 @@ export default {
                 item.active = false;
             })
             this.tabs[index].active = true;
+        },
+        _initWidth() {
+
         }
     },
     created() {
+        this._initWidth()
         this.$nextTick(() => {
             this.scroll = new BScroll(this.$refs.wrapper, {scrollX: true,click: true})
         })
@@ -42,8 +46,7 @@ export default {
 
 <style scoped>
 .tab-div {
-    /* width: 375px; */
-    overflow: scroll;
+    overflow: hidden;
 }
 #app a:hover {
     text-decoration: none !important;
@@ -57,17 +60,18 @@ ul.tab_list {
  }
  .tab_list li a {
      display: block;
+     font-size: .7rem;
      width: 74px;
-     height: 36px;
+     height: 1.8rem;
      color: #666;
      text-align: center;
-     line-height: 36px;
+     line-height: 1.8rem;
 
  }
  .active {
      border-bottom: 2px solid #f12;
  }
- .tab_list li.active a{
+ .tab_list li.active a span{
      color: #f12;
  }
 </style>
