@@ -1,29 +1,29 @@
 <template>
   <div class="footer">
-      <ul id="tabUl">
+      <ul id="tabUl" class="tabUl">
           <li>
             <router-link to="/index">
                 <i class="iconfont icon_footer icon-shouye"></i>
-                <span>首页</span>
+                <span class="name">首页</span>
             </router-link>
           </li>
           <li>
           <router-link to="/category">
                 <i class="iconfont icon_footer icon-fenlei"></i>
-              <span>分类</span>
+              <span class="name">分类</span>
             </router-link>
           </li>
           
           <li>
           <router-link to="/cart">
                 <i class="iconfont icon_footer icon-gouwuche"></i>
-              <span>购物车</span>
+              <span class="name">购物车</span>
             </router-link>
           </li>
           <li>
           <router-link to="/home">
                 <i class="iconfont icon_footer icon-wode"></i>
-              <span>我的</span>
+              <span class="name">我的</span>
             </router-link>
               
           </li>
@@ -51,6 +51,9 @@ export default {
 </script>
 
 <style scoped>
+.tabUl span.name {
+  font-size: .6rem;
+}
 a {
   text-decoration: none;
 }
@@ -79,13 +82,16 @@ a {
   /* color: #666; */
 }
 .icon_footer {
-  font-size: 20px;
+  font-size: 1rem;
   display: block;
   text-align: center;
   /* color: #666; */
 }
 .router-link-active .iconfont, .router-link-active span {
   color: #f19 !important;
+}
+.router-link-active span.name {
+  font-size: .6rem;
 }
 </style>
 

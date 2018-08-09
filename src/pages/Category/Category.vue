@@ -36,11 +36,11 @@
     <!-- 品牌 -->
     <div class="brand" v-show="brandFlag == 1">
         <div class="hot_brand">
-            <h4>-- 推荐品牌 --</h4>
+            <h4 class="brand-title">-- 推荐品牌 --</h4>
             <ul>
                 <li v-for="(item) in brandList" :key="item.Id">
                     <div class="hot_brand-content">
-                        <img :src="'../../../static'+item.Img" alt="">
+                        <img :src="'../../../static'+item.Img" class="brand-img" alt="">
                         <span>{{item.Name}}</span>
                         <span>{{item.country}}</span>
                     </div>
@@ -226,20 +226,24 @@ export default {
 .hot_brand {
   height: 100%;
 }
-.hot_brand h4 {
+.hot_brand .brand-title {
   text-align: center;
+  font-size: .8rem;
+  line-height: 2rem;
 }
 .hot_brand ul li {
   width: 33%;
   float: left;
+  margin: 10px 0px;
 }
 .hot_brand-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
-.hot_brand-content .img {
-  width: 2rem;
+.hot_brand-content .brand-img {
+  width: 5rem;
 }
 </style>
