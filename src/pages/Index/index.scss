@@ -1,0 +1,46 @@
+@import '@/assets/scss/theme.scss';
+.index {
+    &_inner {
+        .index_inner_ul_item {
+            height: 9.375rem;
+            padding: 1.5rem;
+            background: $f_color;
+            margin-bottom: 1rem;
+            a {
+                display: block;
+            }
+            .content {
+                display: flex;
+                &_left {
+                    .title {
+                        font-size: 1.25rem;
+                        font-weight: 400;
+                    }
+                    .txt {
+                        width: 37.5rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        padding-top: 1rem;
+                    }
+                    .info {
+                        padding-top: 1rem;
+                        font-size: 0.875rem;
+                        .space {
+                            padding-right: 0.75rem;
+                        }
+                        .time,
+                        .labels {
+                            color: $color_9;
+                        }
+                        .labels {
+                            border: 0.0625rem solid $bg_color_e;
+                            border-radius: 0.25rem;
+                            padding: 0.125rem 0.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

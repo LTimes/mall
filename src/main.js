@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import store from './store/index'
 import './utils/rem'
-import '@/assets/css/common.css'
+import '@/assets/css/common.scss'
 
 import VueWechatTitle from 'vue-wechat-title'
 

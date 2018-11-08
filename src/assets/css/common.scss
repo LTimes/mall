@@ -1,0 +1,87 @@
+body,
+div,
+span,
+header,
+footer,
+nav,
+section,
+aside,
+article,
+ul,
+dl,
+dt,
+dd,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+i,
+b,
+textarea,
+button,
+input,
+select {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    color: #333;
+    box-sizing: border-box;
+    font-weight: lighter;
+    font-family: Microsoft YaHei, -apple-system, PingFang SC, Hiragino Sans GB, Helvetica Neue, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+$vw_fontSize: 16;
+@function rem($px) {
+    @return ($px / $vw_fontSize) * 1rem;
+}
+
+// 根元素使用vw 单位
+$vw_design: 750;
+html {
+    font-size: ($vw_fontSize/($vw_design / 2)) * 100vw;
+    // 同时使用media queries 限制根元素的大小
+    @media screen and (max-width: 319px) {
+        font-size: 12px;
+    }
+    @media screen and (min-width: 540px) {
+        font-size: 16px;
+    }
+}
+
+// body 也增加最大最小宽度限制，避免默认100%宽度的block元素跟随body 过大或者过小
+body {
+    // min-width: 320px;
+    // max-width: 540px;
+    background: #f5f5f5;
+}
+
+input,
+select:focus {
+    outline: none;
+}
+
+
+/* 清楚浮动 */
+
+.clear:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.clear {
+    zoom: 1
+}

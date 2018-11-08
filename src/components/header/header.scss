@@ -1,16 +1,75 @@
-.router-link-active .iconfont,
-.router-link-active span {
-  color: #f90 !important;
+@import '@/assets/scss/theme.scss';
+.router-link-active .header_ul_li_name {
+    color: $active_color;
 }
 
-.router-link-active span.name {
-  font-size: 0.6rem;
+header {
+    background: $f_color;
+    .inner_header {
+        min-width: 720px;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        height: 4rem;
+        justify-content: space-around;
+        align-items: center;
+        .header_ul {
+            display: flex;
+            &_li {
+                width: 4rem;
+                text-align: center;
+                &_a {
+                    line-height: 4rem;
+                    display: block;
+                }
+            }
+        }
+        .search {
+            position: relative;
+            &_input {
+                width: 12.5rem;
+                border: 0.0625rem solid #ddd;
+                height: 2rem;
+                border-radius: 0.25rem;
+                padding-left: 0.5rem;
+            }
+            &_txt {
+                position: absolute;
+                right: 0.375rem;
+                top: 0;
+                line-height: 2rem;
+                font-size: 0.875rem;
+                color: $active_color;
+                cursor: pointer;
+            }
+        }
+        .login_box {
+            &_inner {
+                display: flex;
+                width: 9.375rem;
+                justify-content: space-around;
+                &_sign {
+                    display: block;
+                    width: 3.75rem;
+                    height: 2.125rem;
+                    text-align: center;
+                    line-height: 2rem;
+                    border-radius: 4px;
+                    border: 0.0625rem solid $active_color;
+                }
+                &_register {
+                    background: $active_color;
+                    color: $f_color;
+                }
+            }
+        }
+    }
 }
-$fontSize: 12px;
 
-.name {
-  .txts {
-    color: red;
-    font-size: $fontSize;
-  }
-}
+// .logo,
+// .header,
+// .search,
+// .login_box {
+//     border: 1px solid;
+// }
