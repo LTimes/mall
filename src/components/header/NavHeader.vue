@@ -1,60 +1,50 @@
 <template>
   <div class="navheader">
-    <div class="search-box">
-      <span class="region-name" slot="region">北京
-        <i class="iconfont icon-shouhuodizhi"></i>
-      </span>
-      <input type="text" class="search" placeholder="搜索名称、类目、关键字">
-    </div>
+    <ul id="tabUl" class="tabUl">
+          <li>
+            <router-link to="/index">
+                <span class="name">首页</span>
+            </router-link>
+          </li>
+          <li>
+          <router-link to="/category">
+              <span class="name">分类</span>
+            </router-link>
+          </li>
+          
+          <li>
+          <router-link to="/label">
+            <span class="name">标签</span>
+            </router-link>
+          </li>
+          <li>
+          <router-link to="/about">
+              <span class="name">关于</span>
+            </router-link>
+              
+          </li>
+      </ul>
   </div>
 </template>
 
 <script>
- import '@/assets/font/demo.css';
-  import '@/assets/font/iconfont.css';
+// import "./header.scss"
 
 export default {
-  data () {
-    return {
+  data() {
+    return {};
+  },
+  mounted() {
+    console.log(this.$store.state)
+  },
+  methods: {
+    goAdress(path) {
+      this.$router.push(path);
     }
   }
-}
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.navheader {
-  padding: .25rem .5rem 0;
-}
-.search-box {
-  width: 100%;
-  padding: .3rem 0;
-  display: flex;
-  justify-content: space-between;
-}
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-.search {
-  background: #eee;
-  border: 1px solid #eee;
-  font-size: .7rem;
-  padding: 6px;
-  border-radius: 4px;
-  width: 14.3rem;
-}
-.region-name {
-  font-size: .875rem;
-  line-height: 1.75rem;
-}
-.search:focus {
-  border:1px solid #eee;
-  border-radius: 4px;
-  outline: 0;
-}
+<style lang="scss" scoped src='./header.scss'>
 
 </style>

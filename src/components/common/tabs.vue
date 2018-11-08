@@ -1,9 +1,9 @@
 <template>
   <div class="tab-div" ref="wrapper">
       <ul class="tab_list">
-          <li v-for="(item, index) in tabs" :key="item.tabId" v-bind:class="{'active':item.active}" @click="tabsShow(index)">
+          <!-- <li v-for="(item, index) in tabs" :key="item.tabId" v-bind:class="{'active':item.active}" @click="tabsShow(index)">
           <a href="javascript:;"><span>{{item.Text}}</span></a>
-          </li>
+          </li> -->
       </ul>
   </div>
 </template>

@@ -1,0 +1,16 @@
+.router-link-active .iconfont,
+.router-link-active span {
+  color: #f90 !important;
+}
+
+.router-link-active span.name {
+  font-size: 0.6rem;
+}
+$fontSize: 12px;
+
+.name {
+  .txts {
+    color: red;
+    font-size: $fontSize;
+  }
+}

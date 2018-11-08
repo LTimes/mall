@@ -1,6 +1,6 @@
 <template>
   <div class="banner-box" @mouseover="clearRunInv" @mouseout="runInv">
-    <div class="banner">
+    <!-- <div class="banner">
       <a href="javascript:;">
         <transition name="slide-fade">
           <img :src="banners[nowIndex].ImgUrl" v-if="isShow" :alt="banners[nowIndex].Text">
@@ -9,20 +9,8 @@
           <img :src="banners[nowIndex].ImgUrl" v-if="!isShow" :alt="banners[nowIndex].Text">
         </transition>
       </a>
-    </div>
-    <div class="page">
-      <ul>
-        <!-- <li>
-          <span @click="goto(prevIndex)">&lt;</span>
-        </li> -->
-        <li v-for="(item,index) in banners.length" :key="index">
-          <a @click="goto(index)" :class="{'on': index === nowIndex}" href="javascript:;"></a>
-        </li>
-        <!-- <li>
-          <span @click="goto(nextIndex)">&gt;</span>
-        </li> -->
-      </ul>
-    </div>
+    </div> -->
+    
   </div>
 </template>
 
