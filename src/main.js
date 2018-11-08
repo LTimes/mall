@@ -7,6 +7,10 @@ import store from './store/index'
 import './utils/rem'
 import '@/assets/css/common.css'
 
+import VueWechatTitle from 'vue-wechat-title'
+
+Vue.use(VueWechatTitle)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -42,6 +42,10 @@ select {
     Arial,
     sans-serif;
     -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
 }
 
 input,
@@ -54,10 +58,9 @@ body {
     width: 100%;
     height: 100%;
 }
-
+    
 
 /* 清楚浮动 */
-
 .clear:after {
     display: block;
     clear: both;
@@ -65,7 +68,6 @@ body {
     visibility: hidden;
     height: 0
 }
-
 .clear {
     zoom: 1
 }
