@@ -1,0 +1,89 @@
+  @import '@/assets/scss/theme.scss';
+
+.toast-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  background: rgba(0, 0, 0, .5);
+}
+
+.toast-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background: #fff;
+
+  // border-radius: 4px;
+  .content {
+    padding: 20px;
+  }
+
+  .toast-header {
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    position: relative;
+
+    .title {
+      padding-left: 20px;
+      font-weight: 400;
+    }
+
+    .close {
+      position: absolute;
+      top: .625rem;
+      text-align: center;
+      line-height: 1.875rem;
+      font-size: 1rem;
+      right: .375rem;
+      cursor: pointer;
+      width: 1.875rem;
+      height: 1.875rem;
+
+      &:hover {
+        border-radius: 50%;
+        background: $bg_color_e;
+      }
+    }
+  }
+}
+
+.toast-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.toast-btn .btn {
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 40px;
+  width: 100px;
+  border-radius: 2px;
+  height: 40px;
+}
+
+.toast-btn .btn-submit {
+  color: #fff;
+  background: #3B87FF;
+  border: 1px solid #3B87FF;
+}
+
+.toast-btn .btn-cancel {
+  color: #333333;
+  background: rgba(249, 249, 249, 1);
+  border: 1px solid #eee;
+  margin-right: 8px;
+}

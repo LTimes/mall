@@ -36,28 +36,50 @@
       </div>
       <div class="login_box">
         <div class="login_box_inner">
-          <a class="login_box_inner_sign" href="javascript:;">登录</a>
-          <a class="login_box_inner_sign login_box_inner_register" href="javascript:;">注册</a>
+          <a class="login_box_inner_sign" href="javascript:;" @click="login">登录</a>
+          <a class="login_box_inner_sign login_box_inner_register" @click="registers" href="javascript:;">注册</a>
         </div>
       </div>
     </div>
+    <Register :isModalRegister=isRegister @btnCancel="btnRModal"></Register>
+    <Login :isModalLogin=isLogin @btnCancel="btnLModal"></Login>
   </header>
   
 </template>
 
 <script>
-// import "./header.scss"
+import Register from '_/register/register'
+import Login from '_/login/login'
 
 export default {
   data() {
-    return {};
+    return {
+      isRegister: false,
+      isLogin: false,
+    };
   },
   mounted() {
     console.log(this.$store.state)
   },
+  components:{
+    Register,
+    Login
+  },
   methods: {
     goAdress(path) {
       this.$router.push(path);
+    },
+    registers() {
+      this.isRegister = true
+    },
+    btnRModal() {
+      this.isRegister = false
+    },
+    login() {
+      this.isLogin = true
+    },
+    btnLModal() {
+      this.isLogin = false
     }
   }
 };
