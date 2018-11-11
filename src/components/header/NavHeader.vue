@@ -36,6 +36,7 @@
       </div>
       <div class="login_box">
         <div class="login_box_inner">
+          <a href="javascript:;" @click="post" class="login_box_inner_post">写文章</a>
           <a class="login_box_inner_sign" href="javascript:;" @click="login">登录</a>
           <a class="login_box_inner_sign login_box_inner_register" @click="registers" href="javascript:;">注册</a>
         </div>
@@ -80,6 +81,9 @@ export default {
     },
     btnLModal() {
       this.isLogin = false
+    },
+    post() {
+      this.$router.push('/post')
     }
   }
 };

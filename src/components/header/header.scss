@@ -47,8 +47,12 @@ header {
         .login_box {
             &_inner {
                 display: flex;
-                width: 9.375rem;
+                width: 12.5rem;
                 justify-content: space-around;
+                &_post {
+                    line-height: 2.125rem;
+                    color: $active_color;
+                }
                 &_sign {
                     display: block;
                     width: 3.75rem;
@@ -56,6 +60,7 @@ header {
                     text-align: center;
                     line-height: 2rem;
                     border-radius: 4px;
+                    color: $active_color;
                     border: 0.0625rem solid $active_color;
                 }
                 &_register {

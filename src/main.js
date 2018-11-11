@@ -11,6 +11,11 @@ import VueWechatTitle from 'vue-wechat-title'
 
 Vue.use(VueWechatTitle)
 
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+// use md 编辑器
+Vue.use(mavonEditor)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

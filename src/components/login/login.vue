@@ -10,7 +10,7 @@
         <form class="login-form" action="" method="post">
           <!-- <label for="name">昵称</label> -->
           <input class='name' type="text" v-model="form.name" placeholder="请输入昵称">
-          <input class='password' type="password" placeholder="请输入密码">
+          <input class='password' v-model="form.pwd" type="password" placeholder="请输入密码">
           <button class="btn" type='submit'>登录</button>
         </form>
       </div>
@@ -23,7 +23,10 @@ import Dialog from '_/dialog/dialog'
   export default {
     data () {
       return {
-
+        form: {
+          name: '',
+          pwd: ''
+        }
       }
     },
     props: {
