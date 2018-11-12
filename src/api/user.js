@@ -1,6 +1,22 @@
 
 import axios from '@/lib/api.request'
 
+export const httpRegister = ({
+  name,
+  pwd
+  }) => {
+  let data = {
+    name,
+    pwd
+  }
+  return axios.request({
+    url: 'register',
+    data,
+    method: 'post'
+  })
+}
+
+
 // export const login = ({ name, password}) => {
 //   let data = {
 //     name,

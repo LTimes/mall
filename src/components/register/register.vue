@@ -5,13 +5,12 @@
       <span slot='title'>注册
         <span class="l-close" @click="btnCancel"><i class="close-img">&times;</i></span>
       </span>
-      
       <div slot='content'>
         <form class="register-form" action="" method="post">
           <!-- <label for="name">昵称</label> -->
-          <input class='name' type="text" placeholder="请输入昵称">
-          <input class='password' type="password" placeholder="请输入密码，至少6位数">
-          <button class="btn" type='submit'>注册</button>
+          <input class='name' v-model="name" type="text" placeholder="请输入昵称">
+          <input class='password' v-model="pwd" type="password" placeholder="请输入密码，至少6位数">
+          <button class="btn" type='submit' @click.prevent="register">注册</button>
         </form>
       </div>
     </Dialog>
@@ -20,10 +19,12 @@
 
 <script>
 import Dialog from '_/dialog/dialog'
+import {httpRegister} from '@/api/user'
   export default {
     data () {
       return {
-
+        name: '',
+        pwd: ''
       }
     },
     props: {
@@ -43,6 +44,13 @@ import Dialog from '_/dialog/dialog'
     mounted() {},
 
     methods: {
+      register() {
+        let data = {name: this.name, pwd: this.pwd}
+        httpRegister(data).then( res => {
+          console.log(res)
+        })
+        return false;
+      },
       btnCancel() {
             this.$emit('btnCancel',{})
         }

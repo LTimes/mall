@@ -43,6 +43,7 @@ class HttpRequest {
     // 请求拦截
     instance.interceptors.request.use(config => {
       // 添加全局的loading
+      console.log(config)
       // 请求头添加token
       let token = this.getCookie('token')
       if (token) {
