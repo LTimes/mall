@@ -1,9 +1,9 @@
+import { httpLogin } from '@/api/user'
 
 import {
   setToken,
   getToken
 } from '@/lib/util'
-import { resolve } from 'url';
 
 export default {
   state: {
@@ -29,11 +29,25 @@ export default {
   },
   actions: {
     // 登录
-    // handleLogin({commit}, {name, password}) {
-    //   name = name.trim()
-    //   return new Promise((resolve, reject) => {
-
-    //   })
-    // }
+    handleLogin({commit}, {name, pwd}) {
+      return new Promise((resolve, reject) => {
+        httpLogin({
+          name,
+          pwd
+        }).then(res => {
+          if (res.data.success) {
+            commit('setToken', res.data.token)
+            commit('setUserId', res.data.id)
+            commit('setUserName', res.data.name)
+            commit('setAvator', res.data.avator)
+            resolve()
+          } else {
+            alert(res.data.message)
+          }
+        }).catch(err => {
+          console.log(err)
+        })
+      })
+    }
   }
 }

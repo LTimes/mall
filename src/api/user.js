@@ -16,6 +16,21 @@ export const httpRegister = ({
   })
 }
 
+export const httpLogin = ({
+  name,
+  pwd
+}) => {
+  let data = {
+    name,
+    pwd
+  }
+  return axios.request({
+    url: 'login',
+    data,
+    method: 'post'
+  })
+}
+
 
 // export const login = ({ name, password}) => {
 //   let data = {

@@ -15,13 +15,17 @@
 
     components: {},
 
-    computed: {},
+    computed: {
+
+    },
 
     created: {},
 
     mounted: {},
 
-    methods: {}
+    methods: {
+      
+    }
   }
 </script>
 <style scoped>

@@ -11,7 +11,7 @@
           <!-- <label for="name">昵称</label> -->
           <input class='name' type="text" v-model="form.name" placeholder="请输入昵称">
           <input class='password' v-model="form.pwd" type="password" placeholder="请输入密码">
-          <button class="btn" type='submit'>登录</button>
+          <div class="btn" @click="handleSubmit">登录</div>
         </form>
       </div>
     </Dialog>
@@ -19,7 +19,9 @@
 </template>
 
 <script>
-import Dialog from '_/dialog/dialog'
+  import Dialog from '_/dialog/dialog'
+  import { mapActions } from 'vuex'
+
   export default {
     data () {
       return {
@@ -43,12 +45,24 @@ import Dialog from '_/dialog/dialog'
 
     created() {},
 
-    mounted() {},
+    mounted() {
+      
+    },
 
     methods: {
       btnCancel() {
             this.$emit('btnCancel',{})
-        }
+      },
+      ...mapActions([
+        'handleLogin'
+      ]),
+      handleSubmit() {
+        let data = this.form;
+        this.handleLogin(data).then( res => {
+          console.log(res)
+          this.$router.push('./index')
+        })
+      }
     }
   }
 </script>
