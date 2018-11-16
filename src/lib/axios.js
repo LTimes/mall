@@ -47,7 +47,7 @@ class HttpRequest {
       // 请求头添加token
       let token = this.getCookie('token')
       if (token) {
-        config.header.Authorization = 'Bearer ' + token
+        config.headers.Authorization = 'Bearer ' + token;
       }
       if (!Object.keys(this.queue).length) {
         

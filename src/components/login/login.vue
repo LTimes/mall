@@ -105,6 +105,8 @@
       border-radius: .25rem;
       color: $f_color;
       cursor: pointer;
+      text-align: center;
+      line-height: 2.125rem;
     }
   }
 </style>
