@@ -1,7 +1,8 @@
 <!-- login -->
 <template>
-  <div class="login" v-if="isModalLogin">
+  <div class="login" v-if="isLogin">
     <Dialog :isModal='true' :isBtn='false' :isClose='false'>
+      
       <span slot='title'>登录
         <span class="l-close" @click="btnCancel"><i class="close-img">&times;</i></span>
       </span>
@@ -20,7 +21,7 @@
 
 <script>
   import Dialog from '_/dialog/dialog'
-  import { mapActions } from 'vuex'
+  import { mapState ,mapActions } from 'vuex'
 
   export default {
     data () {
@@ -32,16 +33,18 @@
       }
     },
     props: {
-      isModalLogin: {
-        type: Boolean,
-        default: false
-      }
+      // isModalLogin: {
+      //   type: Boolean,
+      //   default: false
+      // }
     },
     components: {
       Dialog
     },
 
-    computed: {},
+    computed: {
+      ...mapState(['isLogin'])
+    },
 
     created() {},
 
@@ -54,12 +57,14 @@
             this.$emit('btnCancel',{})
       },
       ...mapActions([
-        'handleLogin'
+        'handleLogin',
+        'handleIsLogin'
       ]),
       handleSubmit() {
         let data = this.form;
         this.handleLogin(data).then( res => {
-          console.log(res)
+          // console.log(res.data)
+          this.handleIsLogin(false)
           this.$router.push('./index')
         })
       }

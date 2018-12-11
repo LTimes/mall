@@ -2,25 +2,34 @@ import { httpLogin } from '@/api/user'
 
 import {
   setToken,
-  getToken
+  getToken,
+  setUserId,
+  getUserId,
+  setAvator,
+  getAvator,
+  setName,
+  getName
 } from '@/lib/util'
 
 export default {
   state: {
-    userName: '',
-    userId: '',
-    avatorImg: '',
+    userName: getName(),
+    userId: getUserId(),
+    avatorImg: getAvator(),
     token: getToken()
   },
   mutations: {
     setAvator(state, avatorPath) {
-      state.avatorImgPath = avatorPath
+      state.avatorImg = avatorPath
+      setAvator(avatorPath)
     },
     setUserId(state, id) {
       state.userId = id
+      setUserId(id)
     },
     setUserName(state, name) {
       state.userName = name
+      setName(name)
     },
     setToken(state, token) {
       state.token = token
@@ -42,7 +51,7 @@ export default {
             commit('setAvator', res.data.avator)
             resolve()
           } else {
-            alert(res.data.message)
+            console(res.data.message)
           }
         }).catch(err => {
           console.log(err)

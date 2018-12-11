@@ -37,13 +37,20 @@
       <div class="login_box">
         <div class="login_box_inner">
           <a href="javascript:;" @click="post" class="login_box_inner_post">写文章</a>
-          <a class="login_box_inner_sign" href="javascript:;" @click="login">登录</a>
-          <a class="login_box_inner_sign login_box_inner_register" @click="registers" href="javascript:;">注册</a>
+          <template v-if="!user.token">
+            <a class="login_box_inner_sign" href="javascript:;" @click="login">登录</a>
+            <a class="login_box_inner_sign login_box_inner_register" @click="registers" href="javascript:;">注册</a>
+          </template>
+          <template v-else>
+            <span class="names">{{user.userName}}</span>
+            <span class="names"><img class="names-img" :src="user.avatorImg" alt=""></span>
+          </template>
+          
         </div>
       </div>
     </div>
     <Register :isModalRegister=isRegister @btnCancel="btnRModal"></Register>
-    <Login :isModalLogin=isLogin @btnCancel="btnLModal"></Login>
+    <Login @btnCancel="btnLModal"></Login>
   </header>
   
 </template>
@@ -51,16 +58,21 @@
 <script>
 import Register from '_/register/register'
 import Login from '_/login/login'
+import {mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
   data() {
     return {
       isRegister: false,
-      isLogin: false,
     };
   },
   mounted() {
-    console.log(this.$store.state)
+   
+  },
+  computed: {
+    ...mapState({
+      user: 'user'
+    })
   },
   components:{
     Register,
@@ -76,11 +88,12 @@ export default {
     btnRModal() {
       this.isRegister = false
     },
+    ...mapActions(['handleIsLogin']),
     login() {
-      this.isLogin = true
+      this.handleIsLogin(true)
     },
     btnLModal() {
-      this.isLogin = false
+      this.handleIsLogin(false)
     },
     post() {
       this.$router.push('/post')
