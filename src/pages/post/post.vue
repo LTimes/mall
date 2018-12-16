@@ -9,7 +9,7 @@
     <div class="post_label">
       <div class="post_label_title">选择标签：</div>
       <ul class="clear">
-        <li class="label_txt" v-for='(item, index) in labelList' :key='index'>
+        <li :class="['label_txt', active == index ? 'active': '']" v-for='(item, index) in labelList' :key='index'>
           <span class="txt" @click="selectLabel(index)">{{item}}</span>
         </li>
       </ul>
@@ -27,6 +27,7 @@ export default {
       title: '',
       label: [],
       md: '',
+      active: -1,
       labelList: [
         'javascript',
         'html',
@@ -43,6 +44,7 @@ export default {
   methods: {
     selectLabel(index) {
       console.log(index)
+      this.active = index;
       this.label.push(index)
     },
     addPost() {

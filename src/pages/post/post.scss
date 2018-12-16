@@ -41,5 +41,11 @@
             cursor: pointer;
             border-radius: 0.25rem;
         }
+        .active {
+            border: 1px solid #396afe;
+            .txt {
+                color: #396afe;
+            }
+        }
     }
 }
