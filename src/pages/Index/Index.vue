@@ -24,20 +24,33 @@
 </template>
 
 <script>
+import { httpPost } from '@/api/post'
 
 export default {
   data() {
     return {
-      
+      params: {
+        search: '',
+        page: 1,
+        pageSize: 20,
+      }
     }
   },
   components: {
     
   },
   methods: {
-    
+    getPostList() {
+      httpPost(this.params).then(res => {
+        if (res) {
+          console.log(res)
+          alert('获取成功')
+        }
+      })
+    }
   },
   mounted() {
+    this.getPostList()
   },
   created() {
   },

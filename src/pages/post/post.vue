@@ -21,6 +21,7 @@
 </template>
 <script>
 import { httpAddPost } from '@/api/post'
+import { mapState } from 'vuex'
 export default {
   data() {
     return {
@@ -41,6 +42,9 @@ export default {
       ]
     }
   },
+  computed: {
+    ...mapState(['user'])
+  },
   methods: {
     selectLabel(index) {
       console.log(index)
@@ -49,6 +53,7 @@ export default {
     },
     addPost() {
       let data = {
+        userId: this.user.userId,
         title: this.title,
         label: this.label,
         md: this.md
