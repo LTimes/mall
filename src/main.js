@@ -16,6 +16,10 @@ import 'mavon-editor/dist/css/index.css'
 // use md 编辑器
 Vue.use(mavonEditor)
 
+// 引入分页全局组件
+import page from '@/components/page/page.vue'
+Vue.component('Page', page)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -7,7 +7,7 @@
         </a>
       </div>
       <div class="header">
-        <ul class="header_ul">
+        <!-- <ul class="header_ul">
           <li class="header_ul_li">
             <router-link class="header_ul_li_a" to="/index">
                 <span class="header_ul_li_name">首页</span>
@@ -28,12 +28,12 @@
               <span class="header_ul_li_name">关于</span>
             </router-link>
           </li>
-        </ul>
+        </ul> -->
       </div>
-      <div class="search">
+      <!-- <div class="search">
         <input type="text" class="search_input">
         <span class="search_txt">搜索</span>
-      </div>
+      </div> -->
       <div class="login_box">
         <div class="login_box_inner">
           <a href="javascript:;" @click="post" class="login_box_inner_post">写文章</a>
@@ -42,7 +42,7 @@
             <a class="login_box_inner_sign login_box_inner_register" @click="registers" href="javascript:;">注册</a>
           </template>
           <template v-else>
-            <span class="names">{{user.userName}}</span>
+            <!-- <span class="names">{{user.userName}}</span> -->
             <span class="names"><img class="names-img" :src="user.avatorImg" alt=""></span>
           </template>
           
@@ -67,7 +67,7 @@ export default {
     };
   },
   mounted() {
-   
+  
   },
   computed: {
     ...mapState({

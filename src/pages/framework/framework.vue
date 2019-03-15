@@ -1,7 +1,7 @@
 <!-- 结构 -->
 <template>
     <div class="apps">
-      <nav-header></nav-header>  
+      <nav-header></nav-header>
       <main>
         <router-view v-wechat-title="$route.meta.title" />
       </main>

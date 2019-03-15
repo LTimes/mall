@@ -52,10 +52,10 @@ export default [{
                 }
             },
             {
-                path: '/detail',
-                name: 'Detail',
+                path: '/postDetail/:id',
+                name: 'postDetail',
                 component: () =>
-                    import('@/pages/detail/detail.vue'),
+                    import('@/pages/postDetail/postDetail.vue'),
                 meta: {
                     title: '文章详情'
                 }
@@ -63,7 +63,7 @@ export default [{
         ]
     },
     {
-        path: '/post',
+        path: '/post/:id?',
         name: 'Post',
         component: () =>
             import ('@/pages/post/post.vue'),
