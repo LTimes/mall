@@ -100,6 +100,7 @@ export default {
         this.current = 1;
         this.jumpPage = "1";
       }
+      this.$emit('handlerPage',{index})
     }
   }
 };

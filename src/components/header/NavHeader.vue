@@ -3,7 +3,7 @@
     <div class="inner_header">
       <div class="logo">
         <a href="javascript:;">
-          <img src="" alt="logo">
+          <img src="../../assets/img/logo.png" alt="logo">
         </a>
       </div>
       <div class="header">

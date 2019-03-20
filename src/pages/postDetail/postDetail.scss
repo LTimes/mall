@@ -1,0 +1,62 @@
+@import '@/assets/scss/theme.scss';
+
+.post-detail {
+  padding: 1.25rem 0;
+  display: flex;
+  justify-content: space-around;
+  .right {
+    margin-left: 20px;
+    width: 15rem;
+  }
+  .left {
+    width: calc(100% - 15rem);
+  }
+  .left, .right {
+  background: $f_color;
+
+  }
+  .title {
+        font-weight: 700;
+        font-size: 1.625rem;
+        margin: .625rem 0 1.875rem;
+  }
+}
+// 主要内容
+.left {
+  padding: 1.25rem;
+  
+}
+// 标签
+.labels {
+  border-top: 1px solid #eee;
+      border-top: 1px solid #eee;
+      padding: 2rem .625rem 1rem;
+      margin-top: 20px;
+  .label {
+    padding: 4px 8px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+  }
+}
+
+// 右边的侧边信息
+.right {
+  .author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.25rem 0;
+    .author-img {
+      width: 4.25rem;
+      height: 4.25rem;
+      border-radius: 50%;
+      border: 1px solid #eee;
+    }
+    .author-name {
+      font-weight: 700;
+      font-size: .875rem;
+      line-height: 2.5rem;
+    }
+  }
+}

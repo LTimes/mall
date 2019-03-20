@@ -1,6 +1,5 @@
 <template>
   <div class="main">
-    <div @click="indexLogin">登录</div>
     <article class="index">
       <div class="index_inner">
         <ul class="index_inner_ul">
@@ -25,7 +24,7 @@
         </ul>
       </div>
     </article>
-    <Page :total="9" show-sizer></Page>
+    <Page :total="9" :pageSize="this.params.pageSize" :currentPage="this.params.page" v-on:handlerPage="handlerPage" show-sizer></Page>
   </div>
 </template>
 
@@ -39,9 +38,10 @@ export default {
       params: {
         search: '',
         page: 1,
-        pageSize: 20,
+        pageSize: 2,
       },
-      postList:[]
+      postList:[],
+      listTotal: 0
     }
   },
   computed: {
@@ -52,7 +52,7 @@ export default {
   },
   filters: {
     time: function (data) {
-      return data.slice(0,10)
+      return data.slice(0, 10)
     }
   },
   methods: {
@@ -66,7 +66,7 @@ export default {
     getPostList() {
       httpPost(this.params).then(res => {
         if (res.data.success) {
-          console.log(res)
+          
           this.postList = res.data.data
         }
       }).catch(err => {
@@ -89,11 +89,12 @@ export default {
         console.log(err)
       })
     },
-    
-    ...mapActions(['handleIsLogin']),
-    indexLogin() {
-      this.handleIsLogin(true)
+    // 翻页事件
+    handlerPage(data) {
+      this.params.page = data.index;
+      this.getPostList();
     }
+    
   },
   mounted() {
     this.getPostList()

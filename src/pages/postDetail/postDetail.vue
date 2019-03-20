@@ -1,15 +1,21 @@
 <!--  -->
 <template>
   <div class="post-detail">
-    <div class="detail-box">
+    <div class="left">
+      <div class="detail-box">
       <h1 class="title">{{postDetail.title}}</h1>
+      
+      <div class="post-content" v-html="postDetail.md"></div>
+      <div class="labels">
+        <span>所属标签：</span>
+        <span class="label" v-for="(item,index) in postDetail.label" :key="index">{{item.name}}</span>
+      </div>
+    </div>
+    </div>
+    <div class="right">
       <div class="author">
         <img :src="postDetail.avator" alt="作者头像" class="author-img"> 
         <span class="author-name">{{postDetail.name}}</span>
-      </div>
-      <div class="post-content" v-html="postDetail.md"></div>
-      <div class="labels">
-        <span class="label" v-for="(item,index) in postDetail.label" :key="index">{{item.name}}</span>
       </div>
     </div>
   </div>
@@ -56,6 +62,6 @@ import { httpPostDetail } from '@/api/post'
     }
   }
 </script>
-<style scoped>
+<style lang="scss" scoped src='./postDetail.scss'>
 
 </style>
