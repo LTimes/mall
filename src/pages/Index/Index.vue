@@ -24,7 +24,7 @@
         </ul>
       </div>
     </article>
-    <Page :total="9" :pageSize="this.params.pageSize" :currentPage="this.params.page" v-on:handlerPage="handlerPage" show-sizer></Page>
+    <Page v-if="postList.length > 0" :total="listTotal" :pageSize="this.params.pageSize" :currentPage="this.params.page" v-on:handlerPage="handlerPage" show-sizer></Page>
   </div>
 </template>
 
@@ -66,7 +66,7 @@ export default {
     getPostList() {
       httpPost(this.params).then(res => {
         if (res.data.success) {
-          
+          this.listTotal = res.data.totalCount
           this.postList = res.data.data
         }
       }).catch(err => {
@@ -101,6 +101,11 @@ export default {
   },
   created() {
   },
+  watch: {
+    '$route': function(a,b) {
+      console.log(a,b)
+    }
+  }
 };
 </script>
 

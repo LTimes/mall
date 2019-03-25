@@ -1,5 +1,9 @@
 import axios from 'axios'
 import Cookies from 'js-cookie'
+import router from '../router'
+import {
+  Message
+} from 'element-ui';
 
 
 // 定义一个请求的类
@@ -58,6 +62,15 @@ class HttpRequest {
             this.queue[url] = true
             return config
         }, error => {
+            
+            return Promise.reject(error)
+        })
+
+        // 响应拦截
+        instance.interceptors.response.use(response => {
+            this.destroy(url)
+            return response
+        }, error => {
             if (error.response.status) {
               switch (error.response.status) {
                 // 401: 未登录                
@@ -70,6 +83,15 @@ class HttpRequest {
                       redirect: router.currentRoute.fullPath
                     }
                   })
+                  Message({
+                    message: '登录过期，请重新登录',
+                    duration: 2000,
+                    showIcon: false
+                  })
+                  Cookies.remove('token');
+                  Cookies.remove('userName');
+                  Cookies.remove('userId');
+                  Cookies.remove('avatorImg');
                   break;
                   // 403 token过期                
                   // 登录过期对用户进行提示                
@@ -108,15 +130,6 @@ class HttpRequest {
                   break;
               }
             }
-            return Promise.reject(error)
-        })
-
-        // 响应拦截
-        instance.interceptors.response.use(response => {
-            this.destroy(url)
-            return response
-        }, error => {
-            
             return Promise.reject(error)
         })
     }
